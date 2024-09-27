@@ -1,0 +1,22 @@
+#exp-table {
+    /* 将表格的边框合并为单一边框 */
+    border-collapse: collapse;
+    /* 居中 */
+    margin: 1.5rem auto;
+}
+
+.exp-table,
+.exp-th,
+.exp-td {
+    border: 2px groove black;
+    /* 为表格、表头(th)、表格单元(td)添加边框 */
+}
+
+.exp-th,
+.exp-td {
+    padding: 0.2rem 0.4rem;
+}
+
+.exp-subtotal {
+    font-weight: bold;
+}

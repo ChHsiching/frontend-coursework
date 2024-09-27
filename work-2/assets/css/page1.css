@@ -1,0 +1,61 @@
+#section-contact-me > ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#section-contact-me > ul > li > a {
+    min-width: 7em;
+    text-align: left;
+}
+
+#section-contact-me > ul > li > span {
+    flex: 1;
+    text-align: left;
+}
+
+/* 顶栏 */
+header {
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+main {
+    /* margin-left: 18rem;
+    margin-right: 18rem; */
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+pre {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1440px) {
+    header {
+        font-size: 150%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-left: 20%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    main , footer > p {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 1080px) {
+    main , footer > p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

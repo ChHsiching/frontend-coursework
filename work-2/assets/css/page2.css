@@ -1,0 +1,29 @@
+header {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+section > ul > li {
+    color: #b5b5bd;
+    list-style-type: initial;
+    margin-left: 2rem; 
+}
+
+@media (max-width: 1440px) {
+    header {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    main , footer > p {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

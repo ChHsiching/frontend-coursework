@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing DWM</title>
+    
+    <!-- <link rel="shortcut icon" href="https://cdn.brandfetch.io/idVr__KmtM/w/480/h/480/theme/light/logo.png?k=bfHSJFAPEG" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../assets/images/archlinux-icon-crystal-256.svg" type="image/x-icon">
+
+    <!-- 引入 Highlight.js 的 Bash 主题 -->
+    <link rel="stylesheet" href="../assets/js/highlightjs/styles/tokyo-night-dark.css">
+    <script src="../assets/js/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="../assets/css/page2.css">
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/JotaRandom/archlinux-artwork/a9029989166ef42e10251f9d0f0fd09e60be2f31/wmlogos/archlinux-wm-dwm.svg" alt="">
+        <h1>Installing DWM in Arch Linux</h1>
+    </header>
+    
+    <main>
+        <hr>
+
+        <section>
+            <a href="" class="anchors"><h2>Install Dependencies</h2></a>
+            <p>Firt off I need to install the dependencies required by st, dmenu and dwm. Since this is Arch Linux I use pacman to do this.</p>
+
+            <pre><code class="code-block">
+$ sudo pacman -S base-devel git libx11 libxft xorg-server xorg-xinit terminus-font
+            </code></pre>
+            <ul>
+                <li>base-devel Since I will be installing from source this package contains various tools to compile software.</li>
+                <li>git Is needed to get the source code from the suckless git repositories.</li>
+                <li>libx11 and libxft Dependanices required by dwm oherwise it will fail when trying to compile it.</li>
+                <li>xorg-server Is the display server that provides the windows that dwm will manage.</li>
+                <li>xorg-xinit Allows us to start the display server.</li>
+                <li>terminus-font Dwm is configured to use a monospaced font and since I installed a barebones system I need to install such a font now.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <a href="" class="anchors"><h2>Download Git Repositories</h2></a>
+            <p>The source code for the software is avialable from the Suckless git repositories so I simply clone them.</p>
+            
+            <pre><code class="code-block">
+    $ mkdir -p ~/.local/src
+    $ git clone git://git.suckless.org/st ~/.local/src/st
+    $ git clone git://git.suckless.org/dmenu ~/.local/src/dmenu
+    $ git clone git://git.suckless.org/dwm ~/.local/src/dwm
+            </code></pre>
+        </section>
+        
+        <section>
+            <a href="" class="anchors"><h2>Install ST</h2></a>
+
+            <p>I install st by first moving to the directory created when cloning the repository.</p>
+            <pre><code class="code-block">
+    $ cd ~/.local/src/st
+            </code></pre>
+
+            <p>Then its as simple as compiling and instaling the software with the below commands.</p>
+            <pre><code class="code-block">
+    $ make clean
+    $ sudo make install
+            </code></pre>
+        </section>
+
+        <section>
+            <a href="" class="anchors"><h2>Configure and Install DMENU</h2></a>
+
+            <p>Again move to the directory created earlier.</p>
+            <pre><code class="code-block">
+    $ cd ~/.local/src/dmenu
+            </code></pre>
+
+            <p>Before compiling a small edit needs to be made to the file config.mk.</p>
+            <pre><code class="code-block">
+    $ nvim config.mk
+            </code></pre>
+
+            <p>Since I have not installed Xinerama on this system I need to comment out any flags that reference this otherwise dmenu will fail during the compiling.</p>
+            <pre><code class="code-block">
+    # XINERAMALIBS  = -lXinerama
+    # XINERAMAFLAGS = -DXINERAMA
+            </code></pre>
+
+            <p>Again compiling and installing is done with the below commands.</p>
+            <pre><code class="code-block">
+    $ make clean
+    $ sudo make install
+            </code></pre>
+        </section>
+
+        <section>
+            <a href="" class="anchors"><h2>Configure and Install DWM</h2></a>
+
+            <p>For the final time move to the directory created earlier.</p>
+            <pre><code class="code-block">
+    $ cd ~/.local/src/dwm
+            </code></pre>
+
+            <p>As with dmenu the same edit needs to be made to the file config.mk.</p>
+            <pre><code class="code-block">
+    $ nvim config.mk
+            </code></pre>
+
+            <pre><code class="code-block">
+    # XINERAMALIBS  = -lXinerama
+    # XINERAMAFLAGS = -DXINERAMA
+            </code></pre>
+
+            <p>Since I have not installed Xinerama on this system I need to comment out any flags that reference this otherwise dmenu will fail during the compiling.</p>
+            <pre><code class="code-block">
+    # XINERAMALIBS  = -lXinerama
+    # XINERAMAFLAGS = -DXINERAMA
+            </code></pre>
+
+            <p>Again compiling and installing is done with the below commands.</p>
+            <pre><code class="code-block">
+    $ make clean
+    $ sudo make install
+            </code></pre>
+        </section>
+
+        <section>
+            <a href="" class="anchors"><h2>Starting DWM</h2></a>
+
+            <p>Since I have installed xorg-xinit I need to create a .xinitrc in my home folder.</p>
+            <pre><code class="code-block">
+    $ nvim ~/.xinitrc
+            </code></pre>
+
+            <p>The contents of this file is just.</p>
+            <pre><code class="code-block">
+    exec dwm
+            </code></pre>
+
+            <p>I can now start xorg and dwm with the below command.</p>
+            <pre><code class="code-block">
+    $ startx
+            </code></pre>
+        </section>
+
+        <section>
+            <a href="" class="anchors"><h2>Screenshot</h2></a>
+            <div class="images">
+                <img src="../assets/images/dwm_1.png" alt="">
+                <img src="../assets/images/dwm_2.png" alt="">
+            </div>
+        </section>
+
+        <hr>
+    </main>
+    
+    <footer>
+        <p>Disclaimer: The information on this site is for educational purposes only and may not be accurate.</p>
+    </footer>
+</body>
+</html>

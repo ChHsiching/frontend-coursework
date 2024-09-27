@@ -1,0 +1,146 @@
+/* 全局样式：设置默认颜色和背景 */
+body {
+    background-color: #171923; /* 深灰背景 */
+    color: #e7e8f2; /* 浅灰文本 */
+    font-family: 'Scandia';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-size: 133%;    /* 设置缩放 */
+}
+
+/* 顶栏 */
+header {
+    display: flex;
+    justify-content: center;    /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    height: 15%;
+}
+
+header > img {
+    height: 3em;
+    margin-right: 1em;
+}
+
+.images > img {
+    width: 100%;
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: fixed;    /* 固定侧边栏 */
+    width: 15%;
+    height: 100vh;  /* 占满视口高度 */
+    top: 0;
+    padding-top: 10%;
+    left: 0;
+    padding-left: 5%;
+    background-color: #14161f;
+}
+
+/* 底栏 */
+footer {
+    display: flex;
+    justify-content: center;    /* 左右对齐 */
+    align-items: center;    /* 上下对齐 */
+    height: 10%;
+}
+
+footer > p {
+    text-indent: 0;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+p {
+    text-indent: 2em; /* 首行缩进 */
+    color: #b5b5bd;
+}
+
+a, a:visited, a:hover, a:active {
+    color: #eb4432;
+}
+
+
+/* 子区块 */
+section {
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+.sidebar > h2 {
+    font-weight: bold;
+}
+
+li > a::before, a > h2::before {
+    content: "# ";
+    color: #eb4432;
+    margin-left: -1em;
+}
+
+.li-no-style::before {
+    content: "";
+    color: #eb4432;
+    margin-left: 0;
+}
+
+.li-no-style {
+    text-decoration: none;
+}
+
+.side-link, .side-link:visited, .side-link:hover, .side-link:active {
+    text-decoration: none;
+    color: #FFF;
+    line-height: 2.0;
+}
+
+li > ul > li > .side-link, li > ul > li > .side-link:visited, li > ul > li > .side-link:hover, li > ul > li > .side-link:active {
+    padding-left: 2rem;
+    text-decoration: none;
+    color: #b5b5bd;;
+}
+
+ul {
+    list-style-type: none;  /* 取消 li 的符号标志 */
+    padding-left: 0;    /* 取消默认缩进 */
+}
+
+hr {
+    width: 100%;
+    background-color: #394056;
+}
+
+.anchors, .anchors:visited, .anchors:hover, .anchors:active {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.code-block {
+    background-color: #252a37 !important;
+    border-radius: 1rem;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #b5b5bd;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono';
+    display: block;
+}
+
+.code-inline {
+    background-color: #252a37 !important;
+    font-style: #170101;
+    padding: 4px 6px;
+    border-radius: 5px;
+    color: #eb4432;
+    box-sizing: border-box;
+    font-family: 'Scandia';
+    display: inline;
+}

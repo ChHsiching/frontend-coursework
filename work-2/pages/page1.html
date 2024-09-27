@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arch Linux Wiki</title>
+
+    <!-- <link rel="shortcut icon" href="https://cdn.brandfetch.io/idVr__KmtM/w/480/h/480/theme/light/logo.png?k=bfHSJFAPEG" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../assets/images/archlinux-icon-crystal-256.svg" type="image/x-icon">
+
+    <!-- 引入 Highlight.js 的 Bash 主题 -->
+    <link rel="stylesheet" href="../assets/js/highlightjs/styles/tokyo-night-dark.css">
+    <script src="../assets/js/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/page1.css">
+    <link rel="stylesheet" href="../assets/css/font.css">
+</head>
+
+<body>
+    <header>
+        <!-- 彩色 Logo -->
+        <!-- <img src="https://archlinux.org/static/logos/archlinux-logo-dark-scalable.518881f04ca9.svg" alt="Arch Linux Logo"> -->
+        <!-- 单色 Logo -->
+        <img src="https://archlinux.org/static/logos/archlinux-logo-white-scalable.847eeafd581c.svg" alt="">
+        <h1>Wiki</h1>
+    </header>
+
+    <aside class="sidebar">
+        <h2>Content</h2>
+        <ul>
+            <li><a href="#about-me" class="side-link">About me</a></li>
+            <li><a href="#intro" class="side-link">Intro</a></li>
+            <li>
+                <a href="#principles" class="side-link">Principles</a>
+                <ul>
+                    <li><a href="#simplicity" class="side-link">Simplicity</a></li>
+                    <li><a href="#modernity" class="side-link">Modernity</a></li>
+                    <li><a href="#pragmatism" class="side-link">Pragmatism</a></li>
+                    <li><a href="#user-centrality" class="side-link">User centrality</a></li>
+                    <li><a href="#versatility" class="side-link">Versatility</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact-me" class="side-link">Contact me</a></li>
+            <li><a href="#links" class="side-link">Links</a></li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <hr>
+
+        <section id="section-about-me">
+            <a href="#about-me" class="anchors">
+                <h2 id="about-me">About me</h2>
+            </a>
+
+            <p>
+                I am <span style="color: yellow;">Zhang Xiqing</span> from Class <span
+                    style="color: royalblue;">221-2</span>
+                of the <span style="color: lightgreen;">Computer Science and Technology</span> major, in the School of
+                <span style="color: red;">Computer and Control Engineering</span>. My student ID is <span
+                    style="color: purple;">202258501214</span>.
+            </p>
+        </section>
+
+        <section id="section-intro">
+            <a href="#intro" class="anchors">
+                <h2 id="intro">Intro</h2>
+            </a>
+            <p>
+                <a href="https://archlinux.org/">Arch Linux</a> is an independently developed, x86-64 general-purpose
+                GNU/Linux distribution
+                that strives to provide the latest stable versions of most software by following a <code
+                    class="code-inline">rolling-release
+                model</code>. The default installation is a minimal base system, configured by the user to only add
+                what is
+                purposely required.
+            </p>
+            <p>
+                <a href="https://dwm.suckless.org/">dwm</a> is a dynamic window manager for <code
+                    class="code-inline">X</code>. It manages windows in tiled, monocle and floating layouts. All of the
+                layouts can be applied dynamically, optimising the environment for the application in use and the
+                task performed.
+            </p>
+        </section>
+
+        <section id="section-principles">
+            <a href="#principles" class="anchors">
+                <h2 id="principles">Principles</h2>
+            </a>
+
+            <ul>
+                <li>
+                    <h3 id="simplicity">Simplicity</h3>
+                    <p>Arch Linux defines simplicity as without unnecessary additions or modifications. It ships
+                        software as released by the original developers (<a
+                            href="https://en.wikipedia.org/wiki/Upstream_(software_development)">upstream</a>) with
+                        minimal distribution-specific (<a
+                            href="https://en.wikipedia.org/wiki/Downstream_(software_development)">downstream</a>)
+                        changes: patches not accepted by upstream are avoided, and Arch's downstream patches consist
+                        almost entirely of backported bug fixes that are obsoleted by the project's next release.</p>
+                </li>
+                <li>
+                    <h3 id="modernity">Modernity</h3>
+                    <p>Arch Linux strives to maintain the latest stable release versions of its software as long as
+                        systemic package breakage can be reasonably avoided. It is based on a <a
+                            href="https://en.wikipedia.org/wiki/Rolling_release">rolling-release</a> system, which
+                        allows a one-time installation with continuous upgrades.
+                    </p>
+                </li>
+                <li>
+                    <h3 id="pragmatism">Pragmatism</h3>
+                    <p>Arch is a pragmatic distribution rather than an ideological one. The principles here are only
+                        useful guidelines. Ultimately, design decisions are made on a case-by-case basis through
+                        developer consensus. Evidence-based technical analysis and debate are what matter, not politics
+                        or popular opinion.
+                    </p>
+                </li>
+                <li>
+                    <h3 id="user-centrality">User centrality</h3>
+                    <p>Whereas many GNU/Linux distributions attempt to be more user-friendly, Arch Linux has always
+                        been, and shall always remain <code class="code-inline">user-centric</code>. The distribution is
+                        intended to fill the needs of those contributing to it, rather than trying to appeal to as many
+                        users as possible. It is targeted at the proficient GNU/Linux user, or anyone with a <code
+                            class="code-inline">do-it-yourself</code> attitude who is willing to read the documentation,
+                        and solve their own problems.
+                    </p>
+                </li>
+                <li>
+                    <h3 id="versatility">Versatility</h3>
+                    <p>Arch Linux is a <code class="code-inline">general-purpose</code> distribution. Upon installation,
+                        only a command-line environment is provided; rather than tearing out unneeded and unwanted
+                        packages, the user is offered the ability to build a custom system by choosing among thousands
+                        of high-quality packages provided in the <a
+                            href="https://wiki.archlinux.org/title/Official_repositories">official repositories</a> for
+                        the <a href="https://en.wikipedia.org/wiki/X86-64">x86-64</a> architecture.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="section-contact-me">
+            <a href="#contact-me" class="anchors">
+                <h2 id="contact-me">Contact me</h2>
+            </a>
+            <ul>
+                <li>
+                    <a href="mailto:hsichingchang@gmail.com" class="li-no-style" target="_blank">@Email :</a>
+                    <span>hsichingchang@gmail.com</span>
+                </li>
+                <li>
+                    <a href="https://github.com/ChHsiching" class="li-no-style" target="_blank">@GitHub :</a>
+                    <span>ChHsiching</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="section-links">
+            <a href="#links" class="anchors">
+                <h2 id="links">Links</h2>
+            </a>
+            <ul>
+                <li><a href="https://archlinux.org" class="li-no-style" target="_blank">
+                    =&gt; Arch Linux
+                </a></li>
+                <li><a href="https://dwm.suckless.org/" class="li-no-style" target="_blank">
+                    =&gt; DWM
+                </a></li>
+                <li><a href="../pages/page2.html" class="li-no-style" target="_blank">
+                    =&gt; more
+                </a></li>
+            </ul>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>Disclaimer: The information on this site is for educational purposes only and may not be accurate.</p>
+    </footer>
+</body>
+
+</html>

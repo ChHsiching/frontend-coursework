@@ -1,0 +1,56 @@
+* {
+    /* 消除浏览器默认样式 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 启用 flex 容器 */
+    display: flex;
+    /* 容器项目垂直排列 */
+    flex-direction: column;
+    /* 至少铺满整个视口 */
+    min-height: 100vh;
+    /* 基本样式 */
+    background-color: #f5f7fa;
+    color: #333;
+    font-family: 'Scandia';
+}
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    /**
+     * 添加阴影
+     * 水平偏移 0
+     * 垂直偏移 2px
+     * 模糊半径 5px
+     * 扩展半径 0
+     * 颜色：黑色#000，透明度 0.1
+    **/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    /* 填充剩余可用空间 */
+    flex: 1;
+    padding: 2rem;
+    /* 设置固定宽度后，指定 margin auto 居中 */
+    width: 80vw;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+section {
+    margin-bottom: 4rem;
+}

@@ -1,0 +1,47 @@
+footer {
+    /* 文本居中对齐 */
+    text-align: center;
+    padding: 2rem 10vw;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    /* footer 内部启用 Flex 布局 */
+    display: flex;
+    /* 子元素均匀分布，两端对齐 */
+    justify-content: space-between;
+    /* 垂直对齐 */
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.footer-section:first-child {
+    text-align: left;
+}
+
+.footer-section:last-child {
+    text-align: right;
+}
+
+.footer-center {
+    /* 参考 body 进行绝对定位 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-content .footer-section {
+    padding: 1.5rem;
+}
+
+.social-links a {
+    color: #2980b9;
+    /* 取消下划线 */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
