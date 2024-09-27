@@ -36,3 +36,10 @@ If you'd like to contribute or suggest improvements, feel free to open a pull re
 ## Contact
 
 For any questions or collaboration, please reach out via [email](mailto:hsichingchang@gmail.com).
+
+## License
+
+This project is licensed under the terms of the GNU General Public License v2.0.
+Copyright (C) 2024 ChHsiching.
+
+See the [LICENSE](./LICENSE) file for details.
