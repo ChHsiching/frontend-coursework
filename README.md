@@ -40,6 +40,7 @@ For any questions or collaboration, please reach out via [email](mailto:hsiching
 ## License
 
 This project is licensed under the terms of the GNU General Public License v2.0.
+
 Copyright (C) 2024 ChHsiching.
 
 See the [LICENSE](./LICENSE) file for details.
