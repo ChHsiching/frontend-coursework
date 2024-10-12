@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sim - Ant Design Pro</title>
+    <!-- 开发测试 -->
+    <link rel="stylesheet" href="../assets/css/dev.css">
+    <!-- <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/antd.css">
+    <!-- 清除Input -->
+    <!-- defer: 下载脚本文件时不阻塞 HTML 解析，等页面完全解析完后再执行脚本 -->
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/function.js" defer></script>
+</head>
+
+<body>
+    <header style="display: flex; align-items: center;">
+        <h1>
+            <img src="../assets/images/icon.svg" alt="Ant Design Pro" style="height: 1em;">
+        </h1>
+    </header>
+
+    <!-- 内容最外层 flex 容器 -->
+    <main class="setting-container">
+        <!-- 左侧侧边栏 flex-item 容器 -->
+        <div class="setting-sidebar">
+            <!-- 侧边栏中的列表 -->
+            <ul class="setting-menu">
+                <!-- 四个列表项 -->
+                <li class="setting-title setting-title-active">
+                    <a href="#">基本设置</a>
+                </li>
+                <li class="setting-title">
+                    <a href="#">安全设置</a>
+                </li>
+                <li class="setting-title">
+                    <a href="#">账号绑定</a>
+                </li>
+                <li class="setting-title">
+                    <a href="#">新消息通知</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 右侧内容 flex-item 容器 -->
+        <div class="setting-main">
+            <!-- 主要内容容器 -->
+            <div class="basic-setting">
+                <!-- 标题块 -->
+                <h2>基本设置</h2>
+                <!-- 内容块 flex 容器 -->
+                <div class="basic-setting-content-container">
+                    <!-- 左侧表单 flex-item 容器 -->
+                    <div class="setting-form-container">
+                        <!-- 表单块 -->
+                        <form action="#" class="setting-form">
+                            <!-- 邮箱块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label for="email" class="setting-label">邮箱</label>
+                                <div class="input-box">
+                                    <input id="email" class="setting-input" placeholder="email@example.com" type="text"
+                                        autofocus required>
+                                    <button type="button" class="clear-btn" onclick="clearInput('email')">
+                                        <img class="clearIcon" src="../assets/images/clearInput.svg" alt="clear">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 昵称块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label for="nickname" class="setting-label">昵称</label>
+                                <div class="input-box">
+                                    <input id="nickname" class="setting-input" placeholder="nickname" type="text"
+                                        required>
+                                    <button type="button" class="clear-btn" onclick="clearInput('nickname')">
+                                        <img class="clearIcon" src="../assets/images/clearInput.svg" alt="clear">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 个人简介块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label for="profile" class="setting-label">个人简介</label>
+                                <div class="input-box">
+                                    <!-- <input id="profile" class="setting-input" placeholder="Enter Your Profile" type="text"> -->
+                                    <textarea id="profile" class="setting-input setting-textarea"
+                                        placeholder="Please enter your personal profile..." required></textarea>
+                                    <!-- <button type="button" class="clear-btn" onclick="clearInput('profile')">
+                                        <img class="clearIcon" src="../assets/images/clearInput.svg" alt="clear">
+                                    </button> -->
+                                </div>
+                            </div>
+
+                            <!-- 国家块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label class="setting-label">国家/地区</label>
+                                <div class="input-box">
+                                    <!-- <input id="country" class="setting-input" placeholder="email@example.com" type="text"> -->
+                                    <select name="country" id="country" class="setting-input setting-select" required>
+                                        <option value="" selected>Please select</option>
+                                        <option value="china">中国大陆</option>
+                                        <option value="taiwan">中国台湾</option>
+                                        <option value="russia">俄罗斯</option>
+                                        <option value="england">英国</option>
+                                        <option value="japan">日本</option>
+                                    </select>
+                                    <!-- <button type="button" class="clear-btn" onclick="clearInput('country')">
+                                        <img class="clearIcon" src="../assets/images/clearInput.svg" alt="clear">
+                                    </button> -->
+                                </div>
+                            </div>
+
+                            <!-- 生日块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label class="setting-label">生日</label>
+                                <div class="input-box">
+                                    <input id="birthday" class="setting-input" type="date" required>
+                                </div>
+                            </div>
+
+                            <!-- 性别块容器 -->
+                            <div class="setting-item">
+                                <!-- 与输入框关联的 label -->
+                                <label class="setting-label">性别</label>
+                                <div class="radio-box-container">
+                                    <div class="radio-box">
+                                        <input id="gender-male" type="radio" name="gender" value="male">
+                                        <label for="gender-male" class="radio-box__1">
+                                            <img src="../assets/images/male-gender.svg" alt="male gender">
+                                            <p>男</p>
+                                        </label>
+                                        <input id="gender-female" type="radio" name="gender" value="female">
+                                        <label for="gender-female" class="radio-box__2">
+                                            <p>女</p>
+                                        </label>
+                                        <input id="gender-x" type="radio" name="gender" value="x">
+                                        <label for="gender-x" class="radio-box__3">
+                                            <img src="../assets/images/x-gender.svg" alt="X Gender">
+                                            <p>X</p>
+                                        </label>
+                                        <div class="selected-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input class="btn" type="submit" value="更新基本信息">
+                        </form>
+                    </div>
+                    <!-- 右侧头像 flex-item 容器 -->
+                    <div class="avatar-container">
+                        <img src="../assets/images/avator.png" alt="">
+                        <input type="file" name="avator" id="avator">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

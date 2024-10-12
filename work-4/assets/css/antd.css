@@ -1,0 +1,298 @@
+* {
+    /* 消除浏览器默认样式 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '微软雅黑';
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #fff;
+    height: 6vh;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+}
+
+li {
+    list-style: none;
+}
+
+/* 去除 a 的默认样式 */
+a {
+    text-decoration: none;
+    /* 去除下划线 */
+    color: inherit;
+    /* 使用父元素的文字颜色 */
+    font-weight: normal;
+    /* 重置字体粗细 */
+    background: none;
+    /* 去除任何背景 */
+    padding: 0;
+    /* 清除任何内边距 */
+    margin: 0;
+    /* 清除任何外边距 */
+}
+
+a:visited {
+    color: inherit;
+    /* 点击后依然保持父元素的颜色 */
+}
+
+.setting-container {
+    background-color: #fff;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    /* 容器项目垂直排列 */
+    /* flex-direction: column; */
+    margin: 2.5rem auto;
+    padding: 1.2rem 0;
+    /**
+     * 添加阴影
+     * 水平偏移 0
+     * 垂直偏移 2px
+     * 模糊半径 5px
+     * 扩展半径 0
+     * 颜色：黑色#000，透明度 0.1
+    **/
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.setting-sidebar {
+    /* background-color: aquamarine; */
+    width: 15vw;
+    border-right: 1px solid rgba(5, 5, 5, 0.06);
+}
+
+.setting-menu {
+    border-inline-end: 1px solid rgba(5, 5, 5, 0.06);
+}
+
+.setting-title {
+    padding: 1rem 0 1rem 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin: 0.2rem 0.5rem;
+}
+
+.setting-title:hover {
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+}
+
+.setting-title-active,
+.setting-title-active:hover {
+    background-color: #e6f7ff;
+    color: #1890ff;
+    border-radius: 0.5rem;
+}
+
+/* .setting-title>a {
+    display: block;
+    padding: 1rem 0 1rem 2rem;
+    margin: 0.2rem 0.5rem;
+    transition: background-color 0.5s ease-out, color 0.3s ease-out;
+}
+
+.setting-title>a:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.setting-title>a:focus,
+.setting-title>a:focus-within,
+.setting-title>a:active {
+    background-color: #e6f7ff;
+    color: #1890ff;
+    border-radius: 10px;
+} */
+
+.setting-main {
+    /* background-color: aqua; */
+    width: 80vw;
+}
+
+.basic-setting {
+    padding: 0.8rem 3rem;
+}
+
+.basic-setting>h2 {
+    font-weight: normal;
+}
+
+.setting-form-container {
+    margin-top: 2rem;
+}
+
+.setting-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.setting-input {
+    /* padding: 10px; */
+    padding-right: 30px;
+    /* 留出按钮空间 */
+    box-sizing: border-box;
+
+    font-size: 0.9em;
+    padding: 8px;
+    /* 输入框内边距 */
+    border: 1px solid #ccc;
+    /* 输入框边框 */
+    border-radius: 0.5rem;
+    /* 输入框圆角 */
+    width: 20em;
+    /* 输入框宽度 */
+}
+
+.setting-textarea {
+    width: 25rem;
+    height: 5rem;
+}
+
+.setting-select {
+    /* 移除元素默认样式 */
+    -webkit-appearance: none;
+    /* for Chrome & Safari */
+    -moz-appearance: none;
+    /* for Firefox */
+    appearance: none;
+    /* for other browsers */
+    background: url('../images/dropdown.svg') no-repeat right center;
+    background-color: #fff;
+    background-size: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* 垂直居中对齐 */
+}
+
+.radio-box-container {
+    display: flex;
+}
+
+.radio-box {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* box-shadow: .3rem .3rem .6rem lightgray, -.2rem -.2rem .5rem #fff; */
+    border: #cccccc solid 1px;
+    position: relative;
+}
+
+.radio-box>input {
+    display: none;
+}
+
+.radio-box>label>img {
+    height: 1rem;
+    margin-right: 0.2rem;
+}
+
+.radio-box__1,
+.radio-box__2,
+.radio-box__3 {
+    width: 6rem;
+    height: 2.23rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        color: #1890ff;
+    }
+}
+
+.selected-box {
+    position: absolute;
+    pointer-events: none;
+    width: 6rem;
+    height: 2.23rem;
+    /* margin-left: .3rem; */
+    border-radius: .5rem;
+    box-shadow: inset .2rem .2rem .5rem #e6f7ff, inset -.2rem -.2rem .5rem #fff;
+    left: 0;
+    transition: all 0.3s ease; /* 添加平滑滑动效果 */
+}
+
+input[id="gender-male"]:checked + label + .selected-box {
+    left: 0; /* 男性选中的位置 */
+}
+
+input[id="gender-female"]:checked + label + .selected-box {
+    left: 12rem; /* 女性选中的位置 */
+}
+
+input[id="gender-x"]:checked + label + .selected-box {
+    left: 5rem; /* X选中的位置 */
+}
+
+/* 当输入框有内容时显示按钮 */
+.setting-input:not(:placeholder-shown)+.clear-btn {
+    visibility: visible;
+    /* 显示按钮 */
+}
+
+.clear-btn {
+    background: transparent;
+    cursor: pointer;
+    margin-left: -1.5rem;
+    /* 将按钮移至输入框右侧 */
+
+    display: flex;
+    /* 使用 Flexbox */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 1rem;
+    /* 设置按钮宽度 */
+    height: 1rem;
+    /* 设置按钮高度 */
+    padding: 0;
+    /* 移除按钮的默认内边距 */
+    border: none;
+    /* 移除按钮边框 */
+    /* 默认隐藏 */
+    visibility: hidden;
+}
+
+.clear-btn img {
+    max-width: 100%;
+    /* 确保图片不会超出按钮的宽度 */
+    max-height: 100%;
+    /* 确保图片不会超出按钮的高度 */
+}
+
+.setting-item {
+    margin-bottom: 1.5rem;
+}
+.btn {
+    appearance: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.basic-setting-content-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.avator-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.avator-container>img {
+    display: block;
+}
