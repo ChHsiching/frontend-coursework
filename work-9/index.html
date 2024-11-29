@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易猜数字游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game">
+        <h1>猜数字游戏</h1>
+        <p>请在0到100之间猜测一个数字，你只有十次机会。</p>
+        <button onclick="startGame()">开始游戏</button>
+        <input type="number" id="guessInput" placeholder="输入你的猜测" disabled>
+        <button onclick="checkGuess()" disabled>提交猜想</button>
+        <p>剩余次数: <span id="remainingGuesses">10</span></p>
+        <p>结果: <span id="result"></span></p>
+        <button style="margin-top: 20px;" onclick="startGame()" disabled>重新开始</button>
+    </div>
+</body>
+</html>
