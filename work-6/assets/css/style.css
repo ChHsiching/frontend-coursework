@@ -1,0 +1,159 @@
+/* body 样式，应用于整个页面 */
+body {
+    /* 设置页面字体系列：优先使用特定的中文字体，其次为通用的衬线字体 */
+    font-family: "TsukuOldMin", "SimSun", "STSong", serif;
+    /* 设置字体粗细为加粗 */
+    font-weight: bold;
+    /* 设置背景颜色为浅灰米色 */
+    background-color: #e8e0d5;
+    /* 设置字体颜色为深灰色 */
+    color: #4a4a4a;
+    /* 设置行高，以增加行间距 */
+    line-height: 1.6;
+    /* 内边距为 20 像素 */
+    padding: 20px;
+    /* 最大宽度为 800 像素，并居中显示 */
+    max-width: 800px;
+    /* 取消默认的页面外边距 */
+    margin: 0 auto;
+    /* 设置背景图案为SVG图片，生成一个浅米色的网格图案 */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d2c8b5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    /* 设为相对定位，为内部绝对定位的元素提供参照 */
+    position: relative;
+}
+
+/* container 类，用于页面中主要内容容器的样式 */
+.container {
+    /* 设置背景颜色为略带透明度的米色 */
+    background-color: rgba(255, 253, 240, 0.9);
+    /* 边框颜色为浅棕色 */
+    border: 1px solid #d3c6a6;
+    /* 设置内部填充为 40 像素 */
+    padding: 40px;
+    /* 设置容器的阴影效果 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* h1 元素的样式，用于页面标题 */
+h1 {
+    /* 字体粗细设置为正常 */
+    font-weight: normal;
+    /* 字体大小设置为2倍的默认字体大小 */
+    font-size: 2em;
+    /* 字体颜色为深棕色 */
+    color: #8b4513;
+    /* 居中对齐 */
+    text-align: center;
+    /* 标题与下方内容的间距为 20 像素 */
+    margin-bottom: 20px;
+    /* 在标题下方添加一条浅棕色的下划线 */
+    border-bottom: 2px solid #d3c6a6;
+    /* 标题底部的内边距为 10 像素 */
+    padding-bottom: 10px;
+}
+
+/* 鼠标悬停时的 h1 样式 */
+h1:hover {
+    /* 悬停时字体加粗 */
+    font-weight: bold;
+    /* 字体颜色变为深红色 */
+    color: #8B0000;
+    /* 鼠标悬停时，光标变为手形 */
+    cursor: pointer;
+}
+
+/* 作者信息的样式 */
+.author {
+    /* 文字右对齐 */
+    text-align: right;
+    /* 字体设置为斜体 */
+    font-style: italic;
+    /* 与下方内容的间距为 30 像素 */
+    margin-bottom: 30px;
+    /* 字体颜色为深棕色 */
+    color: #8b4513;
+}
+
+/* 诗歌内容的样式 */
+.poem {
+    /* 设置字体大小为 1.2 倍默认字体 */
+    font-size: 1.2em;
+    /* 诗歌内容居中对齐 */
+    text-align: center;
+}
+
+/* 诗歌段落的样式 */
+.poem p {
+    /* 段落间距为 20 像素 */
+    margin-bottom: 20px;
+}
+
+/* 小屏幕下的响应式样式 */
+@media (max-width: 600px) {
+    /* body 样式在小屏幕下的调整 */
+    body {
+        /* 内边距缩小为 10 像素 */
+        padding: 10px;
+    }
+
+    /* container 容器样式在小屏幕下的调整 */
+    .container {
+        /* 内边距缩小为 20 像素 */
+        padding: 20px;
+    }
+
+    /* h1 标题在小屏幕下的字体大小调整 */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    /* poem 内容在小屏幕下的字体大小调整 */
+    .poem {
+        font-size: 1em;
+    }
+}
+
+/* 音乐图标的样式 */
+.music-icon {
+    /* 图标的宽度和高度均为 50 像素 */
+    width: 50px;
+    height: 50px;
+    /* 背景图像设置为音符图标 */
+    background-image: url('../images/music-note-icon.svg');
+    /* 图标背景按比例缩放 */
+    background-size: contain;
+    /* 不重复显示背景图像 */
+    background-repeat: no-repeat;
+    /* 设置鼠标指针样式为手形 */
+    cursor: pointer;
+    /* 设置旋转动画效果 */
+    animation: rotate 2s linear infinite;
+    /* 设置外边距为 20 像素 */
+    margin: 20px;
+    /* 绝对定位图标 */
+    position: absolute;
+    /* 距离顶部 20 像素 */
+    top: 20px;
+    /* 距离右侧 20 像素 */
+    right: 20px;
+}
+
+/* 旋转动画定义 */
+@keyframes rotate {
+    0% {
+        /* 从 0 度旋转开始 */
+        transform: rotate(0deg);
+    }
+    100% {
+        /* 到 360 度旋转结束 */
+        transform: rotate(360deg);
+    }
+}
+
+/* 渐隐效果的样式 */
+.fade-out {
+    /* 设置透明度为 0，完全透明 */
+    opacity: 0;
+    /* 过渡动画，持续时间为 1 秒 */
+    transition: opacity 1s ease;
+}
