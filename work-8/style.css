@@ -1,0 +1,98 @@
+/* 定义CSS变量，方便在整个样式文件中统一管理色彩和动画速度 */
+:root {
+    --gradient-start: #4a00e0; /* 渐变起始颜色（深紫色） */
+    --gradient-end: #8e2de2;   /* 渐变结束颜色（亮紫色） */
+    --text-color: #ffffff;     /* 文本颜色为白色 */
+    --background-color: #1a1a2e; /* 页面背景颜色为深色 */
+    --content-background: rgba(255, 255, 255, 0.1); /* 内容背景透明度较低的白色 */
+    --transition-speed: 0.3s;  /* 动画持续时间，0.3秒 */
+}
+
+/* 全局body样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 字体设置 */
+    background-color: var(--background-color); /* 设置背景色 */
+    color: var(--text-color); /* 设置文本颜色 */
+    line-height: 1.6; /* 行高，增加可读性 */
+    margin: 0;
+    padding: 20px; /* 页面整体内边距 */
+    display: flex; /* 使用Flexbox对齐 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 页面最小高度为视窗高度，保证内容居中 */
+}
+
+/* 手风琴主容器样式 */
+.accordion {
+    width: 100%;
+    max-width: 800px; /* 设置手风琴容器的最大宽度 */
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); /* 背景色为渐变 */
+    border-radius: 12px; /* 边角圆滑 */
+    box-shadow: 0 0 20px rgba(142, 45, 226, 0.4); /* 添加阴影，增强立体感 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+/* 每个手风琴项目的样式 */
+.accordion-item {
+    margin-bottom: 10px; /* 下方留出空间 */
+}
+
+.accordion-item:last-child {
+    margin-bottom: 0; /* 最后一个项目不需要额外的底部边距 */
+}
+
+/* 手风琴标题（标签）样式 */
+.accordion-label {
+    display: block; /* 标签为块级元素 */
+    background-color: rgba(255, 255, 255, 0.1); /* 轻微透明背景 */
+    color: var(--text-color); /* 文本颜色 */
+    padding: 20px; /* 内边距，增大可点击区域 */
+    cursor: pointer; /* 鼠标变成手指图标，提示用户可点击 */
+    transition: all var(--transition-speed) ease; /* 添加平滑的动画过渡 */
+    font-size: 1.2em; /* 字体大小 */
+    font-weight: 500; /* 字体加粗 */
+}
+
+/* 鼠标悬停时，手风琴标题的样式 */
+.accordion-label:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* 更亮的背景色 */
+}
+
+/* 手风琴内容区域的默认样式 */
+.accordion-content {
+    max-height: 0; /* 默认内容高度为0，隐藏内容 */
+    overflow: hidden; /* 防止内容溢出 */
+    transition: max-height var(--transition-speed) ease; /* 通过改变max-height实现平滑展开动画 */
+    background-color: var(--content-background); /* 背景色 */
+}
+
+/* 隐藏单选按钮 */
+.accordion-item input[type="radio"] {
+    display: none; /* 隐藏不需要显示的输入框 */
+}
+
+/* 单选按钮被选中时，改变对应标签的背景色 */
+.accordion-item input[type="radio"]:checked+.accordion-label {
+    background-color: rgba(255, 255, 255, 0.3); /* 选中时背景色更亮 */
+}
+
+/* 当单选按钮被选中时，手风琴内容展开 */
+.accordion-item input[type="radio"]:checked~.accordion-content {
+    max-height: 1000px; /* 设置较大的高度，确保内容显示完全 */
+    padding: 20px; /* 添加内边距 */
+}
+
+/* 手风琴内容中的段落、无序列表和有序列表的样式 */
+.accordion-content p,
+.accordion-content ul,
+.accordion-content ol {
+    margin-top: 0; /* 顶部不留间距，避免内容紧挨 */
+}
+
+/* 代码段的样式 */
+code {
+    background-color: rgba(255, 255, 255, 0.2); /* 轻微透明的背景色 */
+    padding: 2px 4px; /* 代码两侧留出空隙 */
+    border-radius: 4px; /* 圆角边框 */
+    font-family: 'Courier New', Courier, monospace; /* 等宽字体 */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchLinux 指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 页面主体内容 -->
+    <div class="accordion">
+        <!-- 定义一个手风琴式折叠容器，用于展示不同主题的内容区域 -->
+
+        <!-- 折叠项1：ArchLinux 简介 -->
+        <div class="accordion-item">
+            <!-- 每个折叠项的容器 -->
+
+            <input type="radio" name="accordion" id="section1">
+            <!-- 使用单选按钮作为手风琴的开关，类型为 radio，name属性确保一组手风琴只能同时展开一个项，id属性用于关联标签 -->
+
+            <label for="section1" class="accordion-label">ArchLinux 简介</label>
+            <!-- 标签定义了折叠项的标题，并使用for属性关联到上面的单选按钮，点击标签会触发对应的单选按钮 -->
+
+            <article class="accordion-content">
+                <!-- 折叠项的内容部分，包含关于ArchLinux的简介信息 -->
+                <p>ArchLinux 是一个轻量级和灵活的 Linux 发行版，以其简洁和用户至上的设计理念而闻名。它提供了一个最小化的基础系统，让用户能够根据自己的需求进行定制。ArchLinux 的特点包括：</p>
+                <ul>
+                    <li>滚动更新模型，始终保持系统最新</li>
+                    <li>强大的包管理器 Pacman</li>
+                    <li>广泛的软件仓库和用户贡献库（AUR）</li>
+                    <li>详尽的文档和活跃的社区支持</li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- 折叠项2：安装过程 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="section2">
+            <label for="section2" class="accordion-label">安装过程</label>
+
+            <article class="accordion-content">
+                <p>ArchLinux 的安装过程是手动的，需要一定的 Linux 知识。主要步骤包括：</p>
+                <ol>
+                    <li>准备安装介质</li>
+                    <li>配置网络连接</li>
+                    <li>分区和格式化硬盘</li>
+                    <li>安装基本系统</li>
+                    <li>生成 fstab 文件</li>
+                    <li>配置系统设置（如时区、语言等）</li>
+                    <li>安装和配置引导加载程序</li>
+                </ol>
+                <p>虽然过程看似复杂，但它能让用户深入了解系统的工作原理，为后续的系统管理和优化打下基础。</p>
+            </article>
+        </div>
+
+        <!-- 折叠项3：包管理 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="section3">
+            <label for="section3" class="accordion-label">包管理</label>
+
+            <article class="accordion-content">
+                <p>ArchLinux 使用 Pacman 作为其包管理器。Pacman 简单易用，能够高效地处理依赖关系，并保持系统更新。以下是一些常用的 Pacman 命令：</p>
+                <ul>
+                    <li><code>pacman -S package_name</code>：安装指定的包</li>
+                    <li><code>pacman -Syu</code>：更新整个系统</li>
+                    <li><code>pacman -Rs package_name</code>：删除指定的包及其依赖</li>
+                    <li><code>pacman -Ss keyword</code>：搜索包含关键字的包</li>
+                </ul>
+                <p>除了官方仓库，ArchLinux 用户贡献库（AUR）提供了大量社区维护的包，可以通过 AUR 助手（如 yay 或 paru）来安装。</p>
+            </article>
+        </div>
+
+        <!-- 折叠项4：社区与资源 -->
+        <div class="accordion-item">
+            <input type="radio" name="accordion" id="section4">
+            <label for="section4" class="accordion-label">社区与资源</label>
+
+            <article class="accordion-content">
+                <p>ArchLinux 拥有一个活跃的社区，为用户提供丰富的支持和资源：</p>
+                <ul>
+                    <!-- 无序列表，列出用户可以依赖的社区资源 -->
+                    <li>ArchWiki：详尽的文档和指南，涵盖了从基础安装到高级配置的各个方面</li>
+                    <li>官方论坛：讨论问题、分享经验和寻求帮助的主要平台</li>
+                    <li>IRC 频道：实时交流和获取快速支持</li>
+                    <li>邮件列表：开发者和用户之间的交流渠道</li>
+                    <li>ArchLinux 中文社区：为中文用户提供本地化的支持和交流</li>
+                </ul>
+                <p>社区的积极参与使 ArchLinux 保持了持续的发展和改进，也为新用户提供了宝贵的学习资源。</p>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>
