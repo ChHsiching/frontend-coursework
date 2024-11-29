@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">R</div>
+        <h2>创建账户</h2>
+        <form>
+            <div class="avatar-upload">
+                <div class="avatar-preview">
+                    <img id="avatar-preview" src="https://via.placeholder.com/100" alt="头像预览">
+                </div>
+                <label class="file-upload-label">
+                    <input type="file" id="avatar-upload" name="avatar" accept="image/*" required>
+                    上传头像
+                </label>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">用户名 *</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">电子邮箱 *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">密码 *</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">确认密码 *</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">出生日期 *</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="form-label">性别 *</label>
+                <select id="gender" name="gender" required>
+                    <option value="">请选择</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="form-label">兴趣爱好（可多选）：</label>
+                <div class="options">
+                    <label><input type="checkbox" name="hobbies" value="reading"> 阅读</label>
+                    <label><input type="checkbox" name="hobbies" value="sports"> 运动</label>
+                    <label><input type="checkbox" name="hobbies" value="music"> 音乐</label>
+                    <label><input type="checkbox" name="hobbies" value="travel"> 旅行</label>
+                </div>
+            </div>
+            
+            <div class="radio-group">
+                <label class="form-label">通讯方式：</label>
+                <div class="options">
+                    <label><input type="radio" name="contact_preference" value="email" required> 电子邮件</label>
+                    <label><input type="radio" name="contact_preference" value="phone" required> 电话</label>
+                </div>
+            </div>
+            
+            <button type="submit">注册</button>
+        </form>
+        <a href="login.html">已有账号? 登录</a>
+    </div>
+    
+    <script>
+        document.getElementById('avatar-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                document.getElementById('avatar-preview').src = e.target.result;
+            }
+            
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
